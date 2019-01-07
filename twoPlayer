@@ -1,0 +1,56 @@
+// Get all the player names
+	char playerOne[256]; 
+	char playerTwo[256];
+	cout << "What is the name of player one? ";
+	cin >> playerOne;
+
+	cout << "What is the name of player two? ";
+	cin >> playerTwo;
+
+	int playerOneScore = 0;
+	int playerTwoScore = 0;
+
+	int playerOneLastRoll = 0;
+	int playerTwoLastRoll = 0;
+
+	// Scorecard
+	cout << "Enter the scores per player." << endl;
+
+	while (playerOneScore < 9999 || playerTwoScore < 9999)
+	{
+		cout << playerOne << "'s score: ";
+		cin >> playerOneLastRoll;
+		playerOneScore += playerOneLastRoll;
+
+		cout << playerTwo << "'s score: ";
+		cin >> playerTwoLastRoll;
+		playerTwoScore += playerTwoLastRoll;
+
+		cout << "CURRENT SCORES:" << endl;
+		cout << "___________________________________________" << endl;
+		cout << playerOne << "\t" << playerTwo << endl;
+		cout << playerOneScore << "\t" << playerTwoScore << endl;
+		cout << "\n";
+	}
+
+	if (playerOneScore >= 9999)
+	{
+		cout << playerOne << " has " << playerOneScore << " points.  This is your last chance to beat them." << endl;
+		cout << playerTwo << "'s score: ";
+		cin >> playerOneLastRoll;
+	}
+
+	else if (playerTwoScore >= 9999)
+		cout << playerTwo << " has " << playerTwoScore << " points.  This is your last chance to beat them." << endl;
+		cout << playerOne << "'s score: ";
+		cin >> playerOneLastRoll;
+
+		if (playerOneScore > playerTwoScore)
+		{
+			cout << playerOne << " has won the game!" << endl;
+		}
+
+		else
+		{
+			cout << playerTwo << " has won the game!" << endl;
+		}
