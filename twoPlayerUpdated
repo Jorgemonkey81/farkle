@@ -7,6 +7,7 @@ while (maxScore == false)
 		
 		if (maxScore == true)
 		{
+		twoPlayersEndgame(playerOne, playerTwo, playerOneScore, playerTwoScore);
 			break;
 		}
 
@@ -22,4 +23,3 @@ while (maxScore == false)
 		}
 	}
 
-	twoPlayersEndgame(playerOne, playerTwo, playerOneScore, playerTwoScore);
